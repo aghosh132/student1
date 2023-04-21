@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url(./assets/pexels-max-fischer-5212653.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+header{
+    color: rgb(255, 255, 255);
+    height: 50px;
+    background-color: rgb(12, 95, 128);
+}
+
+footer{
+    color: white;
+    height: 70px;
+    position: fixed; 
+    bottom: 0px;
+    background-color: rgb(12, 95, 128);
+    width: 100%;
+}
+
+
+
+
+.s1{
+    opacity: 0;
+}

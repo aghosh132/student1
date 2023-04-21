@@ -1,0 +1,25 @@
+<div class="container w-100 mt-2 p-3 text-center bg-secondary text-white border" style=" font-size: 2em; border-radius: 20px;">
+
+    <table class="text-center w-100">
+        <thead>
+            <tr>
+                <th class="border">Studentid</th>
+                <th class="border">Date</th>
+                <th class="border">Reason for leave</th>
+                <th class="border">Depname</th>
+            </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let i of uhiArray">
+            <td>{{i.studentid}}</td>
+            <td>{{i.Date}}</td>
+            <td>{{i.Reason}}</td>
+            <td>{{i.Depname}}</td>
+            <td><button class="btn btn-success">accept</button></td>
+            <td><button class="btn btn-danger">Reject</button></td>
+         </tr>
+            
+            
+        </tbody>
+    </table>
+</div>

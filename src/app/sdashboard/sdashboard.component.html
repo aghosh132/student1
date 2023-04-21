@@ -1,0 +1,31 @@
+<div class="mt-3 ps-3"><h3 class=" text-white"></h3></div >
+    <a style="font-weight: bolder; font-size: larger;" class="container text-center" routerLink="/viewstatus">Leave Status</a>
+    <h1 class="text-center mt-1" style="color: rgb(12, 95, 128);">Leave Form</h1>
+    <form [formGroup]="sregisterForm" style="background-color: rgba(240, 248, 255, 0.384); border-radius: 30px;" action="" class=" mt-5 p-3 w-50 container text-center">
+        <div class="p-2 mt-2">
+            <input formControlName="studentid"  id="n1" name="name" class="form-control mt-2 p-2" type="text" placeholder="enter studentid">
+        </div>
+        <!-- <div *ngIf="this.registerForm.get('sname')?.errors && this.registerForm.get('sname')?.touched" class="text-start ms-2" >
+            <p class="text-danger">include characters only</p>
+        </div> -->
+        <div class="p-2 mt-2">
+            <input formControlName="date" id="u1" name="uname" class="form-control mt-2 p-2" type="date" placeholder="enter date">
+        </div>
+        <!-- <div *ngIf="this.registerForm.get('studentid')?.errors && this.registerForm.get('studentid')?.touched" class="text-start ms-2" >
+            <p class="text-danger">include characters only</p>
+        </div> -->
+        <div class="p-2 mt-2">
+            <input formControlName="reason" id="p1" name="password" class="form-control mt-2 p-2" type="text" placeholder="reason">
+        </div>
+        <!-- <div *ngIf="this.registerForm.get('psw')?.errors && this.registerForm.get('psw')?.touched" class="text-start ms-2" >
+            <p class="text-danger">include characters and numbers only</p>
+        </div>  -->
+        <div class="p-2 mt-2">
+            <input formControlName="depname" id="p1" name="password" class="form-control mt-2 p-2" type="text" placeholder="Enter Department-Name">
+        </div>
+        <!-- <div *ngIf="this.registerForm.get('psw')?.errors && this.registerForm.get('psw')?.touched" class="text-start ms-2" >
+            <p class="text-danger">include characters and numbers only</p>
+        </div>  -->
+        <button (click)="sregister()"  class="btn btn-info mt-4 p-2">Submit</button>
+        <!-- <p class="mt-2 text-black">Already have an account? <a class="text-info" href="">Sign In</a></p> -->
+    </form>
