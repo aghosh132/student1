@@ -11,15 +11,13 @@
         </thead>
         <tbody>
          <tr *ngFor="let i of uhiArray">
-            <td>{{i.studentid}}</td>
+            <td><input #studentid id="studenti" name="studentis"  style="border: none;" value="{{i.studenti}}" type="text"></td>
             <td>{{i.Date}}</td>
             <td>{{i.Reason}}</td>
             <td>{{i.Depname}}</td>
-            <td><button class="btn btn-success">accept</button></td>
+            <td><button (click)="accept(studentid)" class="btn btn-success">accept</button></td>
             <td><button class="btn btn-danger">Reject</button></td>
          </tr>
-            
-            
         </tbody>
     </table>
 </div>

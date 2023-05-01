@@ -17,7 +17,6 @@ export class LoginComponent {
     
     psw:['',[Validators.required,Validators.pattern('[a-zA-Z0-9]+')]]
     
-    
   })
   aloginForm=this.fb.group({
     adminid: ['',[Validators.required,Validators.pattern('[0-9a-z]+')]],

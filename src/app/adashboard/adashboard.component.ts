@@ -8,19 +8,28 @@ import { DataService } from '../service/data.service';
   styleUrls: ['./adashboard.component.css']
 })
 export class AdashboardComponent {
-
+ac:any
 uhiArray:any
   accepted:any ="leave accepted"
   rejected:any="leave rejected"
 constructor(private ds:DataService){
-this.ds.adminLogin(JSON.parse(localStorage.getItem("currentstudentid") || "")).subscribe((result:any)=>{
-  this.uhiArray=result.transactions
+this.ds.reci().subscribe((result:any)=>{
+  this.uhiArray=result.suber
 })
 }
 
-accept(){
-  var accepted=this.accepted
-  this.ds.accept(accepted)
+accept(studentid:any){
+
+  var studentid=studentid.value
+
+ this.ds.accept(studentid).subscribe((result:any)=>{
+  
+  alert(result.message)
+
+  
+ },result=>{
+  alert(result.error.message)
+ })
 }
 reject(){
   var rejected=this.rejected

@@ -15,11 +15,16 @@ export class DataService {
 
 
 
-accept(accepted:any){
-var data = accepted
+accept(studenti:any){
+
+const data= {studenti} 
+ return this.http.post('http://localhost:3000/accept',data)
 
 }
-
+viewstatus(studenti:any){
+ const data= {studenti} 
+ return this.http.post('http://localhost:3000/viewstatus',data)
+}
 
   sregister(studentid: any, date: any, reason: any,depname:any) {
     const data = { studentid,date, reason,depname }
@@ -51,7 +56,12 @@ var data = accepted
 
     const data = { studentid}
     return this.http.post('http://localhost:3000/adminLogin', data)
-
   }
+
+  
+   reci(){
+    return this.http.get('http://localhost:3000/reci')
+   }
+
 
 }

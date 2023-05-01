@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../service/data.service';
-
 @Component({
   selector: 'app-sdashboard',
   templateUrl: './sdashboard.component.html',
@@ -31,7 +30,6 @@ sregister() {
     localStorage.setItem("currentAdmin",result.currentAdmin)
  alert(result.message)
  this.router.navigateByUrl("")
- 
     },
     result=>{
      alert(result.error.message)
